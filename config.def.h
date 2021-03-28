@@ -5,8 +5,8 @@ static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int snap      = 0;        /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=12", "JoyPixels:pixelsize=12:antialias=true:autohint=true", "Symbols Nerd Font:pixelsize=12" };
-static const char dmenufont[]       = "monospace:size=12";
+static const char *fonts[]          = { "monospace:size=14", "JoyPixels:pixelsize=12:antialias=true:autohint=true", "Symbols Nerd Font:pixelsize=14" };
+static const char dmenufont[]       = "monospace:size=14";
 static const char normbgcolor[]     = "#22262e"; /* main bar color */
 static const char normbordercolor[] = "#22262e"; /* border color unfocused windows */
 static const char normfgcolor[]     = "#d8dee9"; /* tag unselected and main foreground */
