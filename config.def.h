@@ -31,6 +31,7 @@ static const Rule rules[] = {
   /* class            instance    title                      tags mask     iscentered   isfloating   monitor */
   { "Gimp",           NULL,       NULL,                      1 << 4,       0,           0,           -1 },
   { "firefox",        NULL,       NULL,                      1 << 1,       0,           0,           -1 },
+  { "qutebrowser",    NULL,       NULL,                      1 << 1,       0,           0,           -1 },
   { "Gcr-prompter",   NULL,       NULL,                      0,            1,           1,           -1 },
   { "mpv",            NULL,       NULL,                      0,            1,           1,           -1 },
   { "Signal",         NULL,       NULL,                      1 << 2,       0,           0,           -1 },
