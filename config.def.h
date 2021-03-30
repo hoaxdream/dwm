@@ -129,6 +129,7 @@ static Key keys[] = {
   { MODKEY,                       XK_Insert, spawn,          SHCMD("showclip") },
   { MODKEY,                       XK_grave,  spawn,          SHCMD("emojis") },
   { MODKEY,                       XK_b,      spawn,          SHCMD("$BROWSER") },
+  { MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("signal-desktop") },
   { MODKEY,                       XK_g,      spawn,          SHCMD("st -e htop") },
   { MODKEY,                       XK_e,      spawn,          SHCMD("st -e nnnrun") },
   { MODKEY,                       XK_n,      spawn,          SHCMD("st -e newsboat") },
