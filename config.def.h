@@ -28,9 +28,22 @@ static const Rule rules[] = {
    *  WM_CLASS(STRING) = instance, class
    *  WM_NAME(STRING) = title
    */
-  /* class      instance    title       tags mask     isfloating   monitor */
-  { "Gimp",     NULL,       NULL,       0,            1,           -1 },
-  { "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+  /* class            instance    title                      tags mask     iscentered   isfloating   monitor */
+  { "Gimp",           NULL,       NULL,                      1 << 4,       0,           0,           -1 },
+  { "firefox",        NULL,       NULL,                      1 << 1,       0,           0,           -1 },
+  { "Gcr-prompter",   NULL,       NULL,                      0,            1,           1,           -1 },
+  { "mpv",            NULL,       NULL,                      0,            1,           1,           -1 },
+  { "Steam",          NULL,       "Steam",                   1 << 2,       1,           1,           -1 },
+  { "dota2",          NULL,       NULL,                      1 << 3,       0,           0,           -1 },
+  { "RimWorldLinux",  NULL,       NULL,                      1 << 3,       0,           0,           -1 },
+  { "Zenity",         NULL,       NULL,                      1 << 2,       1,           1,           -1 },
+  { "steam_proton",   NULL,       NULL,                      1 << 3,       1,           1,           -1 },
+  { NULL,             NULL,       "Friends List",            1 << 2,       1,           1,           -1 },
+  { NULL,             NULL,       "Wine System Tray",        1 << 4,       0,           1,           -1 },
+  { NULL,             NULL,       "Rockstar Games Launcher", 1 << 3,       1,           1,           -1 },
+  { NULL,             NULL,       "Grand Theft Auto V",      1 << 3,       0,           0,           -1 },
+  { NULL,             NULL,       "tremc",                   1 << 4,       0,           0,           -1 },
+  { NULL,             NULL,       "pulsemixer",              0,            1,           1,           -1 },
 };
 
 /* layout(s) */
@@ -40,9 +53,9 @@ static const int resizehints = 0;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
   /* symbol     arrange function */
-  { "[]=",      tile },    /* first entry is default */
-  { "><>",      NULL },    /* no layout function means floating behavior */
-  { "[M]",      monocle },
+  { "[]=",      tile },          /* first entry is default */
+  { "><>",      NULL },          /* no layout function means floating behavior */
+  { "[M]",      monocle },       /* all windows on top of eachother */
 };
 
 /* key definitions */
