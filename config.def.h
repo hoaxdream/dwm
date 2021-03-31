@@ -8,12 +8,12 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=12", "JoyPixels:pixelsize=12:antialias=true:autohint=true", "Symbols Nerd Font:pixelsize=14" };
 static const char dmenufont[]       = "monospace:size=12";
-static const char normbgcolor[]     = "#22262e"; /* main bar color */
-static const char normbordercolor[] = "#22262e"; /* border color unfocused windows */
-static const char normfgcolor[]     = "#d8dee9"; /* tag unselected and main foreground */
-static const char selfgcolor[]      = "#81a1c1"; /* tag selected and title foreground */
-static const char selbordercolor[]  = "#81a1c1"; /* border color focused windows and tags */
-static char selbgcolor[]            = "#22262e"; /* tag selected and title background */
+static const char normbgcolor[]     = "#222222"; /* main bar color */
+static const char normbordercolor[] = "#444444"; /* border color unfocused windows */
+static const char normfgcolor[]     = "#bbbbbb"; /* tag unselected and main foreground */
+static const char selfgcolor[]      = "#eeeeee"; /* tag selected and title foreground */
+static const char selbordercolor[]  = "#770000"; /* border color focused windows and tags */
+static char selbgcolor[]            = "#005577"; /* tag selected and title background */
 static const char *colors[][3]      = {
   /*               fg           bg           border   */
   [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
