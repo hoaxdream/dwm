@@ -36,6 +36,7 @@ static const Rule rules[] = {
   { "Gcr-prompter",   NULL,       NULL,                      0,            1,           1,           -1 },
   { "mpv",            NULL,       NULL,                      0,            1,           1,           -1 },
   { "Signal",         NULL,       NULL,                      1 << 2,       0,           0,           -1 },
+  { "discord",        NULL,       "Discord",                 1 << 4,       1,           1,           -1 },
   { "Steam",          NULL,       "Steam",                   1 << 4,       1,           1,           -1 },
   { "dota2",          NULL,       NULL,                      1 << 3,       0,           0,           -1 },
   { "RimWorldLinux",  NULL,       NULL,                      1 << 3,       0,           0,           -1 },
