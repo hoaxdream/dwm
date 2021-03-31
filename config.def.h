@@ -2,6 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 3;        /* border pixel of windows */
+static const int gappx              = 40;        /* gaps between windows */
 static const unsigned int snap      = 0;        /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -104,6 +105,9 @@ static Key keys[] = {
   { ALTKEY,                       XK_Tab,    focusmon,       {.i = +1 } },
   { ALTKEY|ShiftMask,             XK_h,      tagmon,         {.i = -1 } },
   { ALTKEY|ShiftMask,             XK_l,      tagmon,         {.i = +1 } },
+  { ALTKEY,                       XK_minus,  setgaps,        {.i = -5 } },
+  { ALTKEY,                       XK_equal,  setgaps,        {.i = +5 } },
+  { ALTKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
   TAGKEYS(                        XK_1,                      0)
   TAGKEYS(                        XK_2,                      1)
   TAGKEYS(                        XK_3,                      2)
