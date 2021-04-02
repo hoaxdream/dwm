@@ -38,8 +38,8 @@ static const Rule rules[] = {
   { "Signal",         NULL,       NULL,                      1 << 2,       0,           0,           -1 },
   { "discord",        NULL,       "Discord",                 1 << 4,       1,           1,           -1 },
   { "Steam",          NULL,       "Steam",                   1 << 4,       1,           1,           -1 },
-  { "dota2",          NULL,       NULL,                      1 << 3,       0,           1,           -1 },
-  { "RimWorldLinux",  NULL,       NULL,                      1 << 3,       0,           1,           -1 },
+  { "dota2",          NULL,       NULL,                      1 << 3,       0,           0,           -1 },
+  { "RimWorldLinux",  NULL,       NULL,                      1 << 3,       0,           0,           -1 },
   { "Zenity",         NULL,       NULL,                      1 << 4,       1,           1,           -1 },
   { "steam_proton",   NULL,       NULL,                      1 << 4,       1,           1,           -1 },
   { NULL,             NULL,       "Friends List",            1 << 4,       1,           1,           -1 },
@@ -85,7 +85,7 @@ static Key keys[] = {
   /* modifier                     key        function        argument */
   { MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
   { MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
-  { MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
+  { MODKEY,                       XK_b,      togglebar,      {0} },
   { MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
   { MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
   { ALTKEY,                       XK_comma,  incnmaster,     {.i = +1 } },
@@ -95,11 +95,12 @@ static Key keys[] = {
   { MODKEY|ShiftMask,             XK_j,      zoom,           {0} },
   { MODKEY,                       XK_Tab,    view,           {0} },
   { MODKEY,                       XK_q,      killclient,     {0} },
-  { MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
-  { MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
-  { MODKEY,                       XK_y,      setlayout,      {.v = &layouts[2]} },
+  { MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} }, /* tile */
+  { MODKEY,                       XK_y,      setlayout,      {.v = &layouts[1]} }, /*floating */
+  { MODKEY,                       XK_u,      setlayout,      {.v = &layouts[2]} }, /* monocle */
   { MODKEY,                       XK_space,  setlayout,      {0} },
   { MODKEY|ShiftMask,             XK_t,      togglefloating, {0} },
+  { MODKEY,                       XK_f,      togglefullscr,  {0} },
   { MODKEY,                       XK_0,      view,           {.ui = ~0 } },
   { MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 /*{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } }, */
