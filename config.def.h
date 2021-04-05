@@ -55,11 +55,19 @@ static const float mfact     = 0.50; /* factor of master area size [0.05..0.95] 
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 
+#include "fibonacci.c"
 static const Layout layouts[] = {
   /* symbol     arrange function */
-  { "[]=",      tile },          /* first entry is default */
-  { "><>",      NULL },          /* no layout function means floating behavior */
-  { "[M]",      monocle },       /* all windows on top of eachother */
+  { "[]=",      tile },                    /* 00 first entry is default */
+
+  { "[@]",      spiral },                  /* 01 ru_gaps compatible fibonacci spiral */
+  { "[\\]",     dwindle },                 /* 02 ru_gaps compatible decreasing in size right and leftward */
+
+  { "|M|",      centeredmaster },          /* 03 ru_gaps compatible centeredmaster */
+  { ">M>",      centeredfloatingmaster },  /* 04 ru_gaps compatible */
+
+  { "><>",      NULL },                    /* 05 no layout function means floating behavior */
+  { "[M]",      monocle },                 /* 06 all windows on top of eachother */
 };
 
 /* key definitions */
@@ -96,8 +104,12 @@ static Key keys[] = {
   { MODKEY,                       XK_Tab,    view,           {0} },
   { MODKEY,                       XK_q,      killclient,     {0} },
   { MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} }, /* tile */
-  { MODKEY,                       XK_y,      setlayout,      {.v = &layouts[1]} }, /*floating */
-  { MODKEY,                       XK_u,      setlayout,      {.v = &layouts[2]} }, /* monocle */
+  { MODKEY,                       XK_y,      setlayout,      {.v = &layouts[1]} }, /* fibonacci spiral */
+  { MODKEY|ShiftMask,             XK_y,      setlayout,      {.v = &layouts[2]} }, /* fibonacci dwindle */
+  { MODKEY,                       XK_u,      setlayout,      {.v = &layouts[3]} }, /* centered master */
+  { MODKEY|ShiftMask,             XK_u,      setlayout,      {.v = &layouts[4]} }, /* centered floating master */
+  { MODKEY,                       XK_i,      setlayout,      {.v = &layouts[5]} }, /* floating */
+  { MODKEY|ShiftMask,             XK_i,      setlayout,      {.v = &layouts[6]} }, /* monocle */
   { MODKEY,                       XK_space,  setlayout,      {0} },
   { MODKEY|ShiftMask,             XK_t,      togglefloating, {0} },
   { MODKEY,                       XK_f,      togglefullscr,  {0} },
