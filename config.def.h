@@ -14,7 +14,7 @@ static const char normbordercolor[] = "#928374"; /* tag unselected and main fore
 static const char selfgcolor[]      = "#222222"; /* title foreground color */
 static const char selbordercolor[]  = "#458588"; /* tag selected and title foreground */
 static const char normfgcolor[]     = "#ebdbb2"; /* border color focused windows, red */
-static char selbgcolor[]            = "#d79921"; /* tag selected background, yellow */
+static const char selbgcolor[]      = "#d79921"; /* tag selected background, yellow */
 static const char *colors[][3]      = {
   /*               fg           bg           border   */
   [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
