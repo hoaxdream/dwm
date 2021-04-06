@@ -9,7 +9,7 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=12", "JoyPixels:size=12:antialias=true:autohint=true", "Symbols Nerd Font:size=15:style=bold:antialias=true:autohint=true" };
 static const char dmenufont[]       = "monospace:size=12";
 static const char normbgcolor[]     = "#222222"; /* main bar color */
-static const char titlefg[]         = "#458588"; /* border color unfocused windows */
+static const char titlefg[]         = "#770000"; /* border color unfocused windows */
 static const char normbordercolor[] = "#928374"; /* tag unselected and main foreground */
 static const char selfgcolor[]      = "#222222"; /* title foreground color */
 static const char selbordercolor[]  = "#458588"; /* tag selected and title foreground */
