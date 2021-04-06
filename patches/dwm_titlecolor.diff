@@ -13,10 +13,10 @@ index 1c0b587..48e7ace 100644
 --- a/config.def.h
 +++ b/config.def.h
 @@ -16,6 +16,7 @@ static const char *colors[][3]      = {
- 	/*               fg         bg         border   */
- 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
- 	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
-+	[SchemeTitle]  = { col_gray4, col_cyan,  col_cyan  },
+  /*               fg         bg         border   */
+  [SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
+  [SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
++ [SchemeTitle]  = { col_gray4, col_cyan,  col_cyan  },
  };
  
  /* tagging */
@@ -35,13 +35,13 @@ index 4465af1..216e1f3 100644
         NetWMWindowTypeDialog, NetClientList, NetLast }; /* EWMH atoms */
 @@ -730,7 +730,7 @@ drawbar(Monitor *m)
  
- 	if ((w = m->ww - sw - x) > bh) {
- 		if (m->sel) {
--			drw_setscheme(drw, scheme[m == selmon ? SchemeSel : SchemeNorm]);
-+			drw_setscheme(drw, scheme[m == selmon ? SchemeTitle : SchemeNorm]);
- 			drw_text(drw, x, 0, w, bh, lrpad / 2, m->sel->name, 0);
- 			if (m->sel->isfloating)
- 				drw_rect(drw, x + boxs, boxs, boxw, boxw, m->sel->isfixed, 0);
+  if ((w = m->ww - sw - x) > bh) {
+    if (m->sel) {
+-     drw_setscheme(drw, scheme[m == selmon ? SchemeSel : SchemeNorm]);
++     drw_setscheme(drw, scheme[m == selmon ? SchemeTitle : SchemeNorm]);
+      drw_text(drw, x, 0, w, bh, lrpad / 2, m->sel->name, 0);
+      if (m->sel->isfloating)
+        drw_rect(drw, x + boxs, boxs, boxw, boxw, m->sel->isfixed, 0);
 -- 
 2.20.1
 
