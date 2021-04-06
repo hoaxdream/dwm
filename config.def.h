@@ -11,16 +11,15 @@ static const char dmenufont[]       = "monospace:size=12";
 static const char normbgcolor[]     = "#222222"; /* main bar color */
 static const char normbordercolor[] = "#444444"; /* border color unfocused windows */
 static const char normfgcolor[]     = "#bbbbbb"; /* tag unselected and main foreground */
-static const char col_gray4[]       = "#d79921"; /* tag unselected and main foreground */
-static const char selfgcolor[]      = "#222222"; /* title foreground color */
+static const char titlefg[]         = "#005577"; /* tag unselected and main foreground */
 static const char selbordercolor[]  = "#770000"; /* tag selected and title foreground */
-static const char selbgcolor[]      = "#222222"; /* border color focused windows, red */
-static const char color_orange[]    = "#d79921"; /* tag selected background, yellow */
+static const char selcolor[]      = "#222222"; /* border color focused windows, red */
+static const char selbordercolor[]  = "#d79921"; /* tag selected background, yellow */
 static const char *colors[][3]      = {
   /*               fg           bg           border   */
   [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
-  [SchemeSel]  = { color_orange, selbgcolor,  selbordercolor  },
-  [SchemeTitle] = { col_gray4, normbgcolor,  normbgcolor  },
+  [SchemeSel]  = { selbordercolor, selcolor,  selbordercolor  },
+  [SchemeTitle] = { titlefg, normbgcolor,  normbgcolor  },
 };
 
 /* tagging */
