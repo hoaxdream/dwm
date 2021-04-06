@@ -8,18 +8,18 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=12", "JoyPixels:size=12:antialias=true:autohint=true", "Symbols Nerd Font:size=15:style=bold:antialias=true:autohint=true" };
 static const char dmenufont[]       = "monospace:size=12";
-static const char normbgcolor[]     = "#222222"; /* main bar color */
-static const char titlefg[]         = "#458588"; /* border color unfocused windows */
-static const char normbordercolor[] = "#928374"; /* tag unselected and main foreground */
-static const char selfgcolor[]      = "#222222"; /* title foreground color */
-static const char selbordercolor[]  = "#770000"; /* tag selected and title foreground */
-static const char normfgcolor[]     = "#ebdbb2"; /* border color focused windows, red */
-static const char selbgcolor[]      = "#d79921"; /* tag selected background, yellow */
+static const char col_gray1[]       = "#222222"; /* main bar color */
+static const char col_gray2[]       = "#458588"; /* border color unfocused windows */
+static const char col_gray3[]       = "#928374"; /* tag unselected and main foreground */
+static const char col_gray4[]       = "#222222"; /* title foreground color */
+static const char col_cyan[]        = "#770000"; /* tag selected and title foreground */
+static const char col_font[]        = "#ebdbb2"; /* border color focused windows, red */
+static const char col_orange[]      = "#d79921"; /* tag selected background, yellow */
 static const char *colors[][3]      = {
   /*               fg           bg           border   */
-  [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
-  [SchemeSel]  = { selfgcolor,  selbgcolor,  selbordercolor  },
-  [SchemeTitle] = { selfgcolor, selbordercolor,  selbordercolor  },
+  [SchemeNorm] = { col_font, col_gray1, col_gray3 },
+  [SchemeSel]  = { col_gray4, col_orange,  col_cyan  },
+  [SchemeTitle] = { col_gray4, col_cyan,  col_cyan  },
 };
 
 /* tagging */
@@ -88,7 +88,8 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 /*static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL }; */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
+/*static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL }; */
+static const char *dmenucmd[] = { "dmenu_run", NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 #include <X11/XF86keysym.h>
