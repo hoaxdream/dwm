@@ -11,7 +11,7 @@ static const char dmenufont[]       = "monospace:size=12";
 static const char normbgcolor[]     = "#222222"; /* main bar color */
 static const char normbordercolor[] = "#444444"; /* border color unfocused windows */
 static const char normfgcolor[]     = "#928374"; /* tag unselected and main foreground */
-static const char titlefg[]         = "#005577"; /* tag unselected and main foreground */
+static const char titlefg[]         = "#458588"; /* tag unselected and main foreground */
 static const char selbordercolor[]  = "#770000"; /* tag selected and title foreground */
 static const char seltagfgcolor[]   = "#d79921"; /* tag selected background, yellow */
 static const char *colors[][3]      = {
