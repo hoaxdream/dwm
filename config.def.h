@@ -19,7 +19,7 @@ static const char color_orange[]    = "#d79921"; /* tag selected background, yel
 static const char *colors[][3]      = {
   /*               fg           bg           border   */
   [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
-  [SchemeSel]  = { selfgcolor,  selbgcolor,  selbordercolor  },
+  [SchemeSel]  = { color_orange, selbgcolor,  selbordercolor  },
   [SchemeTitle] = { col_gray4, normbgcolor,  normbgcolor  },
 };
 
