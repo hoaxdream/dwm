@@ -13,12 +13,11 @@ static const char normbordercolor[] = "#444444"; /* border color unfocused windo
 static const char normfgcolor[]     = "#bbbbbb"; /* tag unselected and main foreground */
 static const char titlefg[]         = "#005577"; /* tag unselected and main foreground */
 static const char selbordercolor[]  = "#770000"; /* tag selected and title foreground */
-static const char selcolor[]      = "#222222"; /* border color focused windows, red */
-static const char selbordercolor[]  = "#d79921"; /* tag selected background, yellow */
+static const char seltagfgcolor[]   = "#d79921"; /* tag selected background, yellow */
 static const char *colors[][3]      = {
   /*               fg           bg           border   */
   [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
-  [SchemeSel]  = { selbordercolor, selcolor,  selbordercolor  },
+  [SchemeSel]  = { seltagfgcolor, normbgcolor, selbordercolor  },
   [SchemeTitle] = { titlefg, normbgcolor,  normbgcolor  },
 };
 
