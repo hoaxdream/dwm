@@ -121,7 +121,6 @@ static Key keys[] = {
   { MODKEY|ShiftMask,             XK_i,      setlayout,      {.v = &layouts[6]} }, /* monocle */
   { MODKEY,                       XK_space,  setlayout,      {0} },
   { MODKEY|ShiftMask,             XK_t,      togglefloating, {0} },
-  { MODKEY,                       XK_f,      togglefullscr,  {0} },
   { MODKEY,                       XK_0,      view,           {.ui = ~0 } },
   { MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 /*{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } }, */
