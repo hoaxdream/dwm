@@ -47,7 +47,7 @@ static const Rule rules[] = {
   { NULL,             NULL,       "Discord",                 1 << 4,       1,           1,           -1 },
   { "Steam",          NULL,       NULL,                      1 << 4,       1,           1,           -1 },
   { NULL,             NULL,       "Steam",                   1 << 4,       1,           1,           -1 },
-  { "dota2",          NULL,       NULL,                      1 << 3,       0,           0,           -1 },
+  { "dota2",          NULL,       NULL,                      1 << 3,       1,           0,           -1 },
   { "RimWorldLinux",  NULL,       NULL,                      1 << 3,       0,           0,           -1 },
   { "Zenity",         NULL,       NULL,                      1 << 4,       1,           1,           -1 },
   { "steam_proton",   NULL,       NULL,                      1 << 4,       1,           1,           -1 },
